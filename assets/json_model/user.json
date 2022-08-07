@@ -1,0 +1,16 @@
+{
+  "id": "string",
+  "password": "string",
+  "firstName": "string",
+  "lastName": "string",
+  "phoneNumber": "string",
+  "email": "string",
+  "userName": "string",
+  "photo": "string",
+  "bio": "string",
+  "bioDetail": "string",
+  "fcmToken": "string",
+  "roleName": "string",
+  "appVersion": "string",
+  "deviceId": "string"
+}

@@ -1,0 +1,124 @@
+name: practitioner
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=2.17.1 <3.0.0'
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  get: 4.6.5
+  flutter_form_builder: ^7.1.0
+  image_picker: ^0.8.4+9
+  permission_handler: ^9.0.1
+  location: ^4.3.0
+  form_builder_validators: ^7.4.0
+  pin_code_text_field: ^1.8.0
+  pin_code_fields: ^7.3.0
+  http: ^0.13.4
+  fluttertoast: ^8.0.8
+  shared_preferences: ^2.0.13
+  sizer: ^2.0.15
+  modal_progress_hud_nsn: ^0.1.0-nullsafety-1
+  extended_image: ^6.2.1
+  #  flutter_credit_card: ^3.0.1
+  #  dotted_border: ^2.0.0+2
+  dio: ^4.0.4
+  #  credit_card_type_detector: ^2.0.0
+  font_awesome_flutter: ^9.2.0
+  shimmer: ^2.0.0
+  #  carousel_pro_nullsafety: ^1.0.2
+  flutter_rating_bar: ^4.0.0
+  cached_network_image: ^3.2.0
+  intl: ^0.17.0
+  #  awesome_dialog: ^2.1.2
+  #  hive: ^2.0.6
+  #  hive_flutter:
+  path_provider:
+  auto_size_text: ^3.0.0
+  #  scan: ^1.6.0
+  #  google_maps_place_picker_mb: ^2.0.0-mb.18
+  country_code_picker: ^2.0.2
+  #  chips_choice_null_safety: ^2.0.6
+  #  flutter_branch_sdk: ^5.0.0
+  package_info_plus: ^1.4.2
+  #  sign_in_with_apple: ^3.3.0
+  #  google_sign_in: ^5.3.0
+  #  flutter_facebook_auth: ^4.2.1
+  #  signalr_core: ^1.1.1
+  flutter_chat_bubble: ^2.0.0
+  #  flutter_keyboard_visibility: ^5.2.0
+  device_info_plus: ^3.2.3
+  #  another_xlider: ^1.0.1+2
+  # time_range_picker: ^2.1.0
+  #  grouped_list: ^5.0.1
+  #  mask_text_input_formatter: ^2.3.0
+  #  expandable: ^5.0.1
+  modal_bottom_sheet: ^2.0.1
+  #  map_picker: ^0.0.3
+  google_maps_flutter: ^2.1.6
+  geolocator: ^8.2.1
+  flutter_staggered_grid_view: ^0.6.1
+  flutter_time_range: ^0.0.3
+  timeago: ^3.2.2
+  video_player: ^2.4.5
+  video_compress: ^3.1.1
+  camera: ^0.9.8+1
+  video_editor_sdk: ^2.6.0
+  photo_editor_sdk: ^2.6.0
+  photo_gallery: ^1.1.1
+  widget_to_image: ^2.0.0
+  extended_sliver: ^2.1.3
+  flutter_custom_clippers: ^2.0.0
+  intl_phone_number_input: ^0.7.0+2
+  scroll_date_picker: ^3.5.2
+  flutter_switch: ^0.3.2
+  #  mapbox_gl: ^0.16.0
+  file_picker:
+  image_cropper: ^2.0.3
+  calendar_builder: ^0.0.6
+  syncfusion_flutter_sliders: ^20.2.40
+  flutter:
+    sdk: flutter
+
+dev_dependencies: 
+  flutter_lints: ^2.0.0
+  lints: 2.0.0
+  flutter_test: 
+    sdk: flutter
+
+flutter:
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/
+
+  fonts:
+    - family: Epilogue-bold #700
+      fonts:
+        - asset: assets/fonts/Epilogue-Bold.ttf
+
+    - family: Lato-semi-bold #800
+      fonts:
+        - asset: assets/fonts/lato_semi_bold.ttf
+
+    - family: Epilogue-semibold #600
+      fonts:
+        - asset: assets/fonts/Epilogue-SemiBold.ttf
+
+    - family: Epilogue-ExtraBold #800
+      fonts:
+        - asset: assets/fonts/Epilogue-ExtraBold.ttf
+
+    - family: Roboto-medium #500
+      fonts:
+        - asset: assets/fonts/Roboto-Medium.ttf
+
+    - family: Roboto-bold #700
+      fonts:
+        - asset: assets/fonts/Roboto-Bold.ttf
+    - family: Epilogue-regular #400
+      fonts:
+        - asset: assets/fonts/Epilogue-Regular.ttf
+
+  uses-material-design: true
