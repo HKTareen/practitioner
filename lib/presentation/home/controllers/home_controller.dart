@@ -7,6 +7,7 @@ class HomeController extends GetxController {
   final count = 0.obs;
   Rx<RangeValues> rangeValues = RangeValues(0, 10).obs;
   RxBool isDrawerShowing = true.obs;
+  RxBool soonestAvailability = true.obs;
   @override
   void onInit() {
     super.onInit();

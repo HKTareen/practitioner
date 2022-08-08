@@ -406,7 +406,7 @@ class _SearchTextFieldState extends State<SearchTextField> {
         ),
         hintText: widget.hint,
         hintStyle:
-        TextStyle(color:widget.hintColor?? AppColors.kGrey, fontSize: widget.hintfontSize,fontFamily: "Roboto-medium",height: 1.4),
+        TextStyle(color:widget.hintColor?? AppColors.kGrey, fontSize: widget.hintfontSize,fontFamily: "Roboto-regular",height: 1.4),
       ),
     );
   }
