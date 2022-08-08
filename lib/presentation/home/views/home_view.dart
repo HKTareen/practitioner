@@ -21,111 +21,94 @@ class HomeView extends GetView<HomeController> {
           body: Row(
             children: [
               SideBar(),
-              Container(
-                height: Get.height,
-                width: 410,
-                decoration: BoxDecoration(
-                    color: AppColors.kWhite,
-                    border: Border(
-                        right: BorderSide(color: AppColors.dividerColor))),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(
-                          left: 24, right: 24, top: 32, bottom: 18),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          SubHeading(
-                            "Create Appointment",
-                            fontSize: 24,
-                            color: AppColors.textBlack,
-                          ),
-                          SizedBox(
-                            width: 40,
-                          ),
-                          Icon(
-                            Icons.arrow_back_ios,
-                            size: 20,
-                            color: AppColors.textBlack,
-                          ),
-                          SizedBox(
-                            width: 20,
-                          ),
-                          Icon(
-                            Icons.remove,
-                            size: 22,
-                            color: AppColors.textBlack,
-                          ),
-                          SizedBox(
-                            width: 20,
-                          ),
-                          Icon(
-                            Icons.close,
-                            size: 20,
-                            color: AppColors.textBlack,
-                          ),
-                        ],
+              Visibility(
+                visible: controller.isDrawerShowing.value,
+                child: Container(
+                  height: Get.height,
+                  width: 410,
+                  decoration: BoxDecoration(
+                      color: AppColors.kWhite,
+                      border: Border(
+                          right: BorderSide(color: AppColors.dividerColor))),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(
+                            left: 24, right: 24, top: 32, bottom: 18),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            SubHeading(
+                              "Create Appointment",
+                              fontSize: 24,
+                              color: AppColors.textBlack,
+                            ),
+                            SizedBox(
+                              width: 40,
+                            ),
+                            drawerNavigation(()=>controller.isDrawerShowing.value= false)
+                          ],
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 24, right: 24, bottom: 18),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          CustomButton2(
-                            onpress: () {},
-                            color: AppColors.textBlack,
-                            title: AppConst.GENERAL,
-                            horizontalPadding: 8.0,
-                            verticalPadding: 4,
-                          ),
-                          CustomButton2(
-                            onpress: () {},
-                            color: AppColors.kWhite,
-                            title: AppConst.GROUP,
-                            horizontalPadding: 8.0,
-                            verticalPadding: 4,
-                            fontColor: AppColors.textBlack,
-                            border: Border.all(color: AppColors.dividerColor),
-                          ),
-                          CustomButton2(
-                            onpress: () {},
-                            color: AppColors.kWhite,
-                            title: AppConst.BLOCK_SLOT,
-                            horizontalPadding: 8.0,
-                            verticalPadding: 4,
-                            fontColor: AppColors.textBlack,
-                            border: Border.all(color: AppColors.dividerColor),
-                          ),
-                          CustomButton2(
-                            onpress: () {},
-                            color: AppColors.kWhite,
-                            title: AppConst.ADVANCED,
-                            horizontalPadding: 8.0,
-                            verticalPadding: 4,
-                            fontColor: AppColors.textBlack,
-                            border: Border.all(color: AppColors.dividerColor),
-                          ),
-                          CustomButton2(
-                            onpress: () {},
-                            color: AppColors.kWhite,
-                            title: AppConst.WALK_IN,
-                            horizontalPadding: 8.0,
-                            verticalPadding: 4,
-                            fontColor: AppColors.textBlack,
-                            border: Border.all(color: AppColors.dividerColor),
-                          ),
-                        ],
+                      Padding(
+                        padding: EdgeInsets.only(left: 24, right: 24, bottom: 18),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            CustomButton2(
+                              onpress: () {},
+                              color: AppColors.textBlack,
+                              title: AppConst.GENERAL,
+                              horizontalPadding: 8.0,
+                              verticalPadding: 4,
+                            ),
+                            CustomButton2(
+                              onpress: () {},
+                              color: AppColors.kWhite,
+                              title: AppConst.GROUP,
+                              horizontalPadding: 8.0,
+                              verticalPadding: 4,
+                              fontColor: AppColors.textBlack,
+                              border: Border.all(color: AppColors.dividerColor),
+                            ),
+                            CustomButton2(
+                              onpress: () {},
+                              color: AppColors.kWhite,
+                              title: AppConst.BLOCK_SLOT,
+                              horizontalPadding: 8.0,
+                              verticalPadding: 4,
+                              fontColor: AppColors.textBlack,
+                              border: Border.all(color: AppColors.dividerColor),
+                            ),
+                            CustomButton2(
+                              onpress: () {},
+                              color: AppColors.kWhite,
+                              title: AppConst.ADVANCED,
+                              horizontalPadding: 8.0,
+                              verticalPadding: 4,
+                              fontColor: AppColors.textBlack,
+                              border: Border.all(color: AppColors.dividerColor),
+                            ),
+                            CustomButton2(
+                              onpress: () {},
+                              color: AppColors.kWhite,
+                              title: AppConst.WALK_IN,
+                              horizontalPadding: 8.0,
+                              verticalPadding: 4,
+                              fontColor: AppColors.textBlack,
+                              border: Border.all(color: AppColors.dividerColor),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    menuTile(AppConst.PRACTITIONER, Icons.add, selected: true),
-                    menuTile(AppConst.PROFILE_DATE_TIME, Icons.add),
-                    menuTile(AppConst.SERVICES_PAYMENT, Icons.add),
-                    menuTile(AppConst.PATIENT, Icons.add),
-                    menuTile(AppConst.NOTES, Icons.add),
-                  ],
+                      menuTile(AppConst.PRACTITIONER, Icons.add, selected: true),
+                      menuTile(AppConst.PROFILE_DATE_TIME, Icons.add),
+                      menuTile(AppConst.SERVICES_PAYMENT, Icons.add),
+                      menuTile(AppConst.PATIENT, Icons.add),
+                      menuTile(AppConst.NOTES, Icons.add),
+                    ],
+                  ),
                 ),
               ),
               Expanded(
@@ -140,10 +123,20 @@ class HomeView extends GetView<HomeController> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SubHeading(
-                          AppConst.PRACTITIONER,
-                          color: AppColors.textBlack,
-                          fontSize: 24,
+                        Row(mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Visibility(
+                                visible: !controller.isDrawerShowing.value,
+                                child: Padding(
+                              padding:  EdgeInsets.only(right: 28),
+                              child: drawerNavigation(()=>controller.isDrawerShowing.value=true),
+                            )),
+                            SubHeading(
+                              AppConst.PRACTITIONER,
+                              color: AppColors.textBlack,
+                              fontSize: 24,
+                            ),
+                          ],
                         ),
                         SizedBox(
                           height: 16,
@@ -276,5 +269,36 @@ class HomeView extends GetView<HomeController> {
         );
       }),
     );
+  }
+
+  Widget drawerNavigation(onBack){
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        GestureDetector(
+          onTap: onBack,
+          child: Icon(
+           controller.isDrawerShowing.value? Icons.arrow_back_ios:Icons.arrow_forward_ios,
+            size: 20,
+            color: AppColors.textBlack,
+          ),
+        ),
+        SizedBox(
+          width: 20,
+        ),
+        Icon(
+          Icons.remove,
+          size: 22,
+          color: AppColors.textBlack,
+        ),
+        SizedBox(
+          width: 20,
+        ),
+        Icon(
+          Icons.close,
+          size: 20,
+          color: AppColors.textBlack,
+        ),
+      ],);
   }
 }
