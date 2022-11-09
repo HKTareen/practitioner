@@ -1,6 +1,7 @@
 # practitioner
 
-A new Flutter project.
+Flutter SDK 3.0.5
+Clone project => choose repo test => pub get => run App on web || mobile
 
 ## Getting Started
 
