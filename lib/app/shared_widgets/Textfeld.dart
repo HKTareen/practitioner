@@ -209,6 +209,7 @@ class DropTextField extends StatelessWidget {
   final TextInputType? textInputType;
   final Validator? validator;
   final List<String>? items;
+
   @override
   final Key? key;
 
@@ -313,10 +314,11 @@ class SearchTextField extends StatefulWidget {
   final Color? hintColor;
   final Widget? prefix;
   final String? prefixPath;
+  final Widget? suffix;
 
    SearchTextField(
       this.obscureText, {
-        this.prefixPath,
+        this.prefixPath,this.suffix,
         this.prefixIcon,
          this.borderColor,
         this.validator,
@@ -376,6 +378,7 @@ class _SearchTextFieldState extends State<SearchTextField> {
       keyboardType: widget.textInputType,
       decoration: InputDecoration(
         suffixIconColor: AppColors.kGrey,filled: true,fillColor: widget.fillColor,
+        suffixIcon: widget.suffix,
         focusColor: Colors.grey,
         prefixIcon:widget.prefixIcon!=null? Padding(
           padding:  EdgeInsets.only(left: 17),
