@@ -6,6 +6,7 @@ import '../config/app_colors.dart';
 
 class Heading extends StatelessWidget {
   final String text;
+  final String fontFamily;
   final Color? color;
   final double? height;
   final TextOverflow? overflow;
@@ -18,13 +19,14 @@ class Heading extends StatelessWidget {
   const Heading(
     this.text, {
     Key? key,
-    this.color = AppColors.textBlack,
+    this.color = AppColors.textBlue,
     this.height,
     this.maxLines = 1,
     this.overflow,
-    this.fontWeight = FontWeight.normal,
+        this.fontFamily = "Epilogue-bold",
+    this.fontWeight = FontWeight.w700,
     this.textAlign,
-    this.fontSize = 20.0,
+    this.fontSize = 22.0,
   }) : super(key: key);
 
   @override
@@ -61,15 +63,15 @@ class SubHeading extends StatelessWidget {
   const SubHeading(
     this.text, {
     Key? key,
-    this.color = AppColors.kWhite,
+    this.color = AppColors.textBlue,
     this.height,
-    this.fontFamily = "Roboto-bold",
+    this.fontFamily = "Roboto-medium",
     this.textAlign,
-    this.fontSize = 8.0,
+    this.fontSize = 16.0,
     this.opacity = 1.0,
     this.maxLines = 1,
     this.overflow,
-    this.fontWeight = FontWeight.w700,
+    this.fontWeight = FontWeight.w500,
     this.decoration,
   }) : super(key: key);
 
