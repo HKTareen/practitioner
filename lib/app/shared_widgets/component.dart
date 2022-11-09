@@ -1,9 +1,11 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
 import '../config/app_colors.dart';
+import '../config/app_constants.dart';
 import '../core/BoxDecoration.dart';
 import '../util/util.dart';
 import 'Text.dart';
@@ -134,6 +136,33 @@ class AppWidgets {
       child: Divider(color: AppColors.dividerColor, height: 1, thickness: 1,),
     );
   }
+
+  static Widget splashLogo({required String title}) {
+    return Column(children: [
+      Image.asset(Utils.getIconPath("logo"),height: Get.height*0.21,),
+      SubHeading(title)
+    ],mainAxisSize: MainAxisSize.min,);
+  }
+
+  static Widget languageButton({required String title,GestureTapCallback? onTap}) {
+    return  InkWell(
+      onTap: onTap,
+      child: Container(
+        height: Get.height*0.069,
+        padding: EdgeInsets.symmetric(horizontal: 25),
+        width: Get.width*0.38,
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(8),color:AppColors.kWhite),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SubHeading(title),
+            Icon(Icons.arrow_forward_ios_rounded,size: 10,)
+
+          ],),
+      ),
+    );
+  }
+
 
 
 }

@@ -3,6 +3,10 @@ import 'dart:typed_data';
 class AppConst {
 
   static const String DASHBOARD = "Dashboard";
+  static const String WELCOME = "Welcome";
+  static const String SELECT_LANGUAGE = "Select Language";
+  static const String ENGLISH = "English";
+  static const String ARABIC = "Arabic";
   static const String CALENDAR = "Calendar";
   static const String CLINICAL = "Clinical";
   static const String BILLING = "Billing";
