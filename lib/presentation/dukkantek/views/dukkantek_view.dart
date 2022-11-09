@@ -84,8 +84,8 @@ class DukkantekView extends GetView<DukkantekController> {
           hint: "Search for events",
           hintfontSize: 15,
           controller: controller.searchController,
-          onChange: (val) {
-            controller.getSeatGeekEvents(withSearch: true);
+          onChange: (val) async{
+          await  controller.getSeatGeekEvents(withSearch: true);
           },
         ),
       ),
@@ -137,7 +137,7 @@ class DukkantekView extends GetView<DukkantekController> {
                                           ""),
                                       fit: BoxFit.cover)),
                             ),
-                            SizedBox(
+                          const  SizedBox(
                               width: 12,
                             ),
                             SizedBox(
@@ -154,7 +154,7 @@ class DukkantekView extends GetView<DukkantekController> {
                                     fontSize: 20,
                                     overflow: TextOverflow.ellipsis,
                                   ),
-                                  SizedBox(
+                                const  SizedBox(
                                     height: 8,
                                   ),
                                   SubHeading(
